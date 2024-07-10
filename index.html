@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Validation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h2>Validation de formulaire avec Javascript</h2>
+    <div class="container mt-5">
+        <form id="myForm">
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom">
+                <br>
+                <span id="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom">
+                <br>
+                <span id="error1"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Entrez votre email">
+                <br>
+                <span id="error2"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe">
+                <br>
+                <span id="error3"></span>
+            </div>
+            <button type="submit" class="btn ">Soumettre</button>
+        </form>
+    </div>
+    <div id="success">
+        <h1>Formulaire soumis avec succés</h1>
+    </div>
+
+    <style>
+        #success{
+            display:none
+        }
+        h2{
+            text-align:center;
+            margin-top:5vh;
+            color:#ce0033;
+            font-weight:400
+        }
+        body{
+            background-color:white;
+        }
+        #myForm {
+  width: 400px;
+  background: linear-gradient(#f5f6fa, #ce0033) padding-box,
+              linear-gradient(160deg, transparent 22%,white, white) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+  margin-left:39vh;
+  margin-top:10vh
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.btn{
+    background-color:white;
+    color:#ce0033;
+    font-weight:500
+}
+label{
+    font-size:2vh
+}
+
+    </style>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
